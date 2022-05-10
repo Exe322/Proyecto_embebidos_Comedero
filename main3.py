@@ -61,6 +61,8 @@ def balanza_comida():
 
     finally:
         GPIO.cleanup()
+        root.quit()
+        
 def balanza_agua():
     try:
         global hy
@@ -116,6 +118,7 @@ def balanza_agua():
 
     finally:
         GPIO.cleanup()
+        root.quit()
         
 def data_cvs():
     #crea un archivo llamado datos.cvs si no existe y lo abre. 
