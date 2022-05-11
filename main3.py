@@ -60,6 +60,7 @@ def balanza_comida():
         print('Finalizacion de la lectura')
 
     finally:
+        # cierre de pines y del dashboard
         GPIO.cleanup()
         root.quit()
         
@@ -110,13 +111,14 @@ def balanza_agua():
         
         # mostrar comienzo del bucle de lectura y medicion del volumen de agua en el deposito
         print("Ahora, leeré datos en un bucle infinito. Para salir presione 'CTRL + C'")
-        print('Lectura del volumen de agua en el deposito')
+        print('Lectura del peso y volumen')
         #llamado de la funcion data_cvs
         data_cvs()
     except (KeyboardInterrupt, SystemExit):
         print('Finalizacion de la lectura')
 
     finally:
+        # cierre de pines y del dashboard
         GPIO.cleanup()
         root.quit()
         
